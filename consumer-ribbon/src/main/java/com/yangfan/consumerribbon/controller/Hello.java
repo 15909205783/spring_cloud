@@ -20,4 +20,10 @@ public class Hello {
 
         return restTemplate.getForObject("http://PROVIDER-HI/hello", String.class) + " world!";
     }
+
+    @GetMapping("testTimeout")
+    public String testTimeout() {
+
+        return restTemplate.getForObject("http://PROVIDER-HI/testTimeout", String.class) ;
+    }
 }

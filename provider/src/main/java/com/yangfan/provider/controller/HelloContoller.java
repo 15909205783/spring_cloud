@@ -10,4 +10,14 @@ public class HelloContoller {
     public String hello(){
         return "hello";
     }
+
+    @GetMapping("/testTimeout")
+    public String testTimeout() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "ok";
+    }
 }
