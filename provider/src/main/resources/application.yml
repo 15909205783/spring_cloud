@@ -1,9 +1,11 @@
 spring:
   application:
-    name: provider
+    name: PROVIDER-HI
 server:
-  port: 8090
+  port: 8091
 eureka:
+  instance:
+    hostname: localhost
   client:
     register-with-eureka: true
     fetch-registry: true

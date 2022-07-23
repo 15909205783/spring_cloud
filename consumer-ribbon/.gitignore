@@ -31,22 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/provider/mvnw.cmd
-/provider/mvnw
-/feign-api/mvnw
-/feign-api/mvnw.cmd
-/eureka/mvnw
-/eureka/mvnw.cmd
-/consumer/mvnw
-/consumer/mvnw.cmd
-/mvnw
-/mvnw.cmd
-/provider/.mvn/
-/.mvn/
-/consumer/.mvn/
-/eureka/.mvn/
-/feign-api/.mvn/
-/provider/.mvn/
-/consumer-ribbon/mvnw
-/consumer-ribbon/mvnw.cmd
-/consumer-ribbon/.mvn/

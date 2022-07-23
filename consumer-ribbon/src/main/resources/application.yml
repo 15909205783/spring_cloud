@@ -1,13 +1,14 @@
 server:
-  port: 8761
+  port: 8088
 spring:
   application:
-    name: EUREKA-SERVER
+    name: CONSUMER-RIBBON
 eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
