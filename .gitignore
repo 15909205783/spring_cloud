@@ -50,3 +50,5 @@ build/
 /consumer-ribbon/mvnw
 /consumer-ribbon/mvnw.cmd
 /consumer-ribbon/.mvn/
+/consumer-feign/mvnw
+/consumer-feign/mvnw.cmd

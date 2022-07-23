@@ -17,4 +17,9 @@ public class Hello {
     public String hello() {
         return helloService.hello() + " world!";
     }
+
+    @GetMapping("testTimeout")
+    public String testTimeout(){
+        return helloService.testTimeout();
+    }
 }

@@ -1,7 +1,5 @@
 package com.yangfan.provider.controller;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,13 +16,13 @@ public class HelloContoller {
     }
 
 // 定义服务降级策略
-    @HystrixCommand(
-            // 当请求超时 或者 接口异常时，会调用 fallbackMethod 声明的方法（方法参数要一致）
-            fallbackMethod = "testTimeoutReserveCase",
-            commandProperties = {
-                    @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value="1500")
-            }
-    )
+//    @HystrixCommand(
+//            // 当请求超时 或者 接口异常时，会调用 fallbackMethod 声明的方法（方法参数要一致）
+//            fallbackMethod = "testTimeoutReserveCase",
+//            commandProperties = {
+//                    @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value="1500")
+//            }
+//    )
     @GetMapping("/testTimeout")
     public String testTimeout() {
         try {
