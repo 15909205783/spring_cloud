@@ -18,6 +18,13 @@ ribbon:
   ReadTimeout: 1000
 
 feign:
+  feign:
+    client:
+      config:
+        pay-service: # 对服务提供者（优先级高）：填对应服务提供者名称，
+          # 对所有提供者(优先级低)：固定"default"
+          connectTimeout: 2000 # 连接超时时间单位ms
+          readTimeout: 2000  # 读取超时时间单位ms
   circuitbreaker:
     enabled: true
 # 开启服务降级
