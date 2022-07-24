@@ -1,6 +1,4 @@
-package com.yangfan.feign.service;
-
-import com.yangfan.feign.service.HelloService;
+package com.yangfan.consumer.service;
 
 public class FeignFallbackServiceImpl implements HelloService {
     @Override

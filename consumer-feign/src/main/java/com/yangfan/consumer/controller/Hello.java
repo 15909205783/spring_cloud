@@ -1,25 +1,33 @@
 package com.yangfan.consumer.controller;
 
-import com.yangfan.feign.service.HelloService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.yangfan.consumer.service.HelloService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 @RequestMapping("foo/")
 public class Hello {
 
-    @Autowired
+    private AtomicInteger count = new AtomicInteger(1);
+
+    @Resource
     public HelloService helloService;
 
     @GetMapping("hello")
     public String hello() {
+        System.out.println(count.getAndIncrement());
         return helloService.hello() + " world!";
     }
 
     @GetMapping("testTimeout")
     public String testTimeout(){
-        return helloService.testTimeout();
+        System.out.println(count.getAndIncrement());
+        String message = helloService.testTimeout();
+        System.out.println(message);
+        return message;
     }
 }

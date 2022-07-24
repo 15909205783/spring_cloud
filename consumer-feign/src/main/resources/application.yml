@@ -15,7 +15,11 @@ ribbon:
   # 指的是建立连接所用的超时时间
   ConnectTimeout: 2000
   # 指的是建立连接后从服务器获取资源的超时时间（即请求处理的超时时间）
-  ReadTimeout: 2000
+  ReadTimeout: 1000
+
 feign:
+  circuitbreaker:
+    enabled: true
+# 开启服务降级
   hystrix:
     enabled: true

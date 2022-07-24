@@ -1,10 +1,10 @@
-package com.yangfan.feign.service;
+package com.yangfan.consumer.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(value = "PROVIDER-HI",fallback = FeignFallbackServiceImpl.class)
+@FeignClient(value = "PROVIDER-HI", fallbackFactory = TestFallbackFactory.class)
 @Component
 public interface HelloService {
 
